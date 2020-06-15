@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>FS.Abp.JobsManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="Mongo2Go" Version="2.2.12" />
+    <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.MongoDB\FS.Abp.JobsManagement.MongoDB.csproj" />
+    <ProjectReference Include="..\FS.Abp.JobsManagement.TestBase\FS.Abp.JobsManagement.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>

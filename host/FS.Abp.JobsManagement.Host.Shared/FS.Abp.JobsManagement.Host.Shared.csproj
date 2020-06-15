@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\framework\FS.Abp\src\FS.Abp.AspNetCore.Mvc.JsonSubTypes\FS.Abp.AspNetCore.Mvc.JsonSubTypes.csproj" />
+    <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.Application\FS.Abp.JobsManagement.Application.csproj" />
+    <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.EntityFrameworkCore\FS.Abp.JobsManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.HttpApi\FS.Abp.JobsManagement.HttpApi.csproj" />
+  </ItemGroup>
+
+</Project>
