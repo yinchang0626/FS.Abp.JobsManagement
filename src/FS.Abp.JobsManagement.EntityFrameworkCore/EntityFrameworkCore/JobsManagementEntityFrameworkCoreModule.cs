@@ -8,7 +8,8 @@ namespace FS.Abp.JobsManagement.EntityFrameworkCore
 {
     [DependsOn(
         typeof(JobsManagementDomainModule),
-        typeof(AbpEntityFrameworkCoreModule)
+        typeof(AbpEntityFrameworkCoreModule),
+        typeof(Volo.Abp.BackgroundJobs.EntityFrameworkCore.AbpBackgroundJobsEntityFrameworkCoreModule)
     )]
     public class JobsManagementEntityFrameworkCoreModule : AbpModule
     {
