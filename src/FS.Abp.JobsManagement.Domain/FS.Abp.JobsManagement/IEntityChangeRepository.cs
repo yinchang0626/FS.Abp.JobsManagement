@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FS.Abp.JobsManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,9 @@ namespace FS.Abp.JobsManagement
 {
     public interface IEntityChangeRepository:IRepository<EntityChange,Guid>
     {
-        Task<List<EntityChange>> FindByEntityIdAsync<TEntity>(Guid id)
+        Task<List<EntityChange>> ListByEntityIdAsync<TEntity>(Guid id)
             where TEntity : Volo.Abp.Domain.Entities.IEntity<Guid>;
+        Task<List<JobHistory>> ListJobHistoryAsync<TJobArgs>();
+        Task<JobDetail> FindJobDetailAsync(string jobId);
     }
 }
