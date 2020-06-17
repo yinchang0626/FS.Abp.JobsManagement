@@ -6,8 +6,7 @@ using Volo.Abp.IdentityServer.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-using FS.Abp.CodingManagement.EntityFrameworkCore;
-using FS.Abp.Themes.EntityFrameworkCore;
+using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 
 namespace FS.Abp.JobsManagement.EntityFrameworkCore
 {
@@ -27,9 +26,7 @@ namespace FS.Abp.JobsManagement.EntityFrameworkCore
             modelBuilder.ConfigureIdentity();
             modelBuilder.ConfigureIdentityServer();
             modelBuilder.ConfigureTenantManagement();
-            modelBuilder.ConfigureThemes();
-            modelBuilder.ConfigureCodingManagement();
-            
+            modelBuilder.ConfigureBackgroundJobs();
 
             base.OnModelCreating(modelBuilder);
         }

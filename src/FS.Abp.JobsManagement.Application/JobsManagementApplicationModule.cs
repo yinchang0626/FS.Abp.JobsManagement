@@ -10,7 +10,7 @@ namespace FS.Abp.JobsManagement
         typeof(JobsManagementApplicationContractsModule),
         typeof(AbpDddApplicationModule),
         typeof(AbpAutoMapperModule),
-        typeof(FS.Abp.Application.AbpDddApplicationModule)
+        typeof(AbpDddApplicationModule)
         )]
     public class JobsManagementApplicationModule : AbpModule
     {

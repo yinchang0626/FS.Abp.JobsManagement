@@ -31,9 +31,9 @@ namespace FS.Abp.JobsManagement.Sample
             var job = await _backgroundJobRepository.FindAsync(args.Id).ConfigureAwait(false);
             if (job.HasProperty(nameof(JobProgress)))
             {
-                job.SetExtraProperty<JobProgress>(nameof(JobProgress), new JobProgress());
+                job.SetProperty(nameof(JobProgress), new JobProgress());
             }
-            var progress = job.GetExtraProperty<JobProgress>(nameof(JobProgress));
+            var progress = job.GetProperty<JobProgress>(nameof(JobProgress));
 
             for (var i = 0; i < 10; i++)
             {
@@ -41,7 +41,7 @@ namespace FS.Abp.JobsManagement.Sample
                 {
                     progress.Percentage = (i + 1) * 10;
                     System.Threading.Thread.Sleep(1000);
-                    job.SetExtraProperty<JobProgress>(nameof(JobProgress), progress);
+                    job.SetProperty(nameof(JobProgress), progress);
                     await _backgroundJobRepository.UpdateAsync(job, true);
                     await scope.SaveAsync();
                 }

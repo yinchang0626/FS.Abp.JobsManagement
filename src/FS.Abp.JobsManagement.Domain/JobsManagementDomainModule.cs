@@ -5,7 +5,7 @@ namespace FS.Abp.JobsManagement
 {
     [DependsOn(
         typeof(JobsManagementDomainSharedModule),
-        typeof(FS.Abp.Domain.AbpDddDomainModule),
+        typeof(Volo.Abp.Domain.AbpDddDomainModule),
         typeof(Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainModule)
         )]
     public class JobsManagementDomainModule : AbpModule

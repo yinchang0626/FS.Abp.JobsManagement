@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFrameworkProfiler.Appender" Version="5.0.5045" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
@@ -27,10 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\framework\FS.Abp\src\FS.Abp.Host.Shared\FS.Abp.Host.Shared.csproj" />
-    <ProjectReference Include="..\..\..\..\modules\FS.Abp.CodingManagement\host\FS.Abp.CodingManagement.Host.Shared\FS.Abp.CodingManagement.Host.Shared.csproj" />
-    <ProjectReference Include="..\..\..\..\modules\FS.Abp.SettingManagement\host\FS.Abp.SettingManagement.Host.Shared\FS.Abp.SettingManagement.Host.Shared.csproj" />
-    <ProjectReference Include="..\..\..\..\modules\FS.Abp.Themes\host\FS.Abp.Themes.Host.Shared\FS.Abp.Themes.Host.Shared.csproj" />
     <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.HttpApi\FS.Abp.JobsManagement.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.Application\FS.Abp.JobsManagement.Application.csproj" />
     <ProjectReference Include="..\..\src\FS.Abp.JobsManagement.EntityFrameworkCore\FS.Abp.JobsManagement.EntityFrameworkCore.csproj" />

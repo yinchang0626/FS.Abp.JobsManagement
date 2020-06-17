@@ -17,7 +17,6 @@ namespace FS.Abp.JobsManagement.Host.HttpApi
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddJsonSubtypesConverterProfile<JobsManagementApplicationModule>();
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers.Create(typeof(JobsManagementApplicationModule).Assembly, action => action.RootPath = "JobsManagement");
